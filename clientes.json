@@ -1,0 +1,44 @@
+[
+    {
+        "nombre": "Pizzaiolo",
+        "razonSocial": "Peck", 
+        "direccion": "Sarmiento 234", 
+        "saldo": 120000 
+    },
+    {
+        "nombre": "Shagui",
+        "razonSocial": "Carina Velazquez", 
+        "direccion": "Azcuenaga 3445", 
+        "saldo": 345000 
+    },
+    {
+        "nombre": "Charly",
+        "razonSocial": "Carlos Flores", 
+        "direccion": "Houssay 567", 
+        "saldo": 224000 
+    },
+    {
+        "nombre": "La Florencia",
+        "razonSocial": "La Florencia Sa", 
+        "direccion": "Perú 654", 
+        "saldo": 30000 
+    },
+    {
+        "nombre": "Di Caprio",
+        "razonSocial": "CaprichoSA", 
+        "direccion": "Maipu 123", 
+        "saldo": 51000 
+    },
+    {
+        "nombre": "Vendimia",
+        "razonSocial": "LaVendimia", 
+        "direccion": "Bolougne Sur Mer 1234", 
+        "saldo": 190000 
+    },
+    {
+        "nombre": "Paprika",
+        "razonSocial": "CocinaFestiva", 
+        "direccion": "Martinez de Rosas 789", 
+        "saldo": 0 
+    }
+]
