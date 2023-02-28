@@ -15,7 +15,7 @@ html {
 
 }
 
-.conteudo__geral {
+.contenido__gral {
     margin-top: 150px;
     background-color: #212123;
     display: flex;
@@ -30,22 +30,22 @@ html {
     margin-bottom: 100px;
 }
 
-.conteudo__geral:hover {
+.contenido__gral:hover {
     perspective: 1000px;
     transition: all 1.3s ease-in;
     transform: perspective(10000px) rotateX(0deg);
 }
 
-.conteudo__geral:hover .titulo__elemento {
+.contenido__gral:hover .titulo__elemento {
     opacity: 1;
 }
 
-.conteudo__geral:hover>div {
+.contenido__gral:hover>div {
     opacity: 1;
     transition-delay: 0s;
 }
 
-.conteudo__geral:hover .titulo__inicial {
+.contenido__gral:hover .titulo__inicial {
     opacity: 0;
 }
 

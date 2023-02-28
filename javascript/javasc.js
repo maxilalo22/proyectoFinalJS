@@ -18,8 +18,10 @@ let buscadorDiv = document.getElementById("buscadorDiv")
 let coincidencia = document.getElementById("coincidencia")
 let clienteAgregado = document.getElementById("nombreInput")
 
+const Clientes = JSON.parse(localStorage.getItem("clientes"))
 
-busquedaBtton.addEventListener("click", function(){
+
+busquedaBtton.addEventListener("click", function () {
     buscadorDiv.style.display = "flex";
 })
 
@@ -38,10 +40,10 @@ function buscarCliente(buscador, Clientes) {
 }
 
 
-buscar.addEventListener("click", function(){
+buscar.addEventListener("click", function () {
     buscarCliente(buscador, Clientes);
-    buscador.value=""
-    
+    buscador.value = ""
+
 })
 
 
@@ -74,11 +76,11 @@ function nuevaVenta(Clientes) {
     let inputPago = document.getElementById("pagoInput")
 
     const ventaCliente = (inputCuenta.value).toUpperCase()
-    const cliVen = Clientes.find((elemento) => {
+    let cliVen = Clientes.find((elemento) => {
         return elemento.nombre === ventaCliente
     })
 
-    console.log(ventaCliente)
+    console.log(cliVen)
 
     let venta = parseInt(inputVenta.value)
 
@@ -122,7 +124,6 @@ function nuevaVenta(Clientes) {
             )
         }
     })
-
 }
 
 generarVenta.addEventListener("click", function () {
@@ -143,13 +144,10 @@ function eliminarCliente() {
     const clienteBorrar = Clientes.find((elemento) => {
         return elemento.nombre === borrarCliente
     })
+
+    console.log(borrarCliente)
     console.log(clienteBorrar)
-    const eliminar = (clienteBorrar) => {
-        let index = Clientes.indexOf(clienteBorrar)
-        if (index != -1) {
-            Clientes.splice(index, 1)
-        }
-    }
+
     Swal.fire({
         title: 'Estas seguro?',
         text: "No podrás revertir este cambio!",
@@ -164,11 +162,16 @@ function eliminarCliente() {
                 'ELIMINADO!',
                 'El cliente ha sido eliminado.',
             )
-            eliminar(clienteBorrar)
+            let index = Clientes.indexOf(clienteBorrar)
+            if (index != -1) {
+                Clientes.splice(index, 1)
+            }
+            localStorage.setItem("clientes", JSON.stringify(Clientes))
             formBajas.reset()
             verCartera(Clientes)
-            localStorage.setItem("clientes", JSON.stringify(Clientes))
+
         }
+
     })
 
 }

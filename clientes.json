@@ -1,24 +1,24 @@
 [
     {
-        "nombre": "Pizzaiolo",
+        "nombre": "PIZZAIOLO",
         "razonSocial": "Peck", 
         "direccion": "Sarmiento 234", 
         "saldo": 120000 
     },
     {
-        "nombre": "Shagui",
+        "nombre": "SHAGUI",
         "razonSocial": "Carina Velazquez", 
         "direccion": "Azcuenaga 3445", 
         "saldo": 345000 
     },
     {
-        "nombre": "Charly",
+        "nombre": "CHARLY",
         "razonSocial": "Carlos Flores", 
         "direccion": "Houssay 567", 
         "saldo": 224000 
     },
     {
-        "nombre": "La Florencia",
+        "nombre": "LA FLORENCIA",
         "razonSocial": "La Florencia Sa", 
         "direccion": "Perú 654", 
         "saldo": 30000 
