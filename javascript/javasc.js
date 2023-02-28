@@ -18,8 +18,6 @@ let buscadorDiv = document.getElementById("buscadorDiv")
 let coincidencia = document.getElementById("coincidencia")
 let clienteAgregado = document.getElementById("nombreInput")
 
-const Clientes = JSON.parse(localStorage.getItem("clientes"))
-
 
 busquedaBtton.addEventListener("click", function () {
     buscadorDiv.style.display = "flex";
@@ -29,8 +27,7 @@ function buscarCliente(buscador, Clientes) {
     let clienteBuscado = Clientes.filter(
         (cliente) => cliente.nombre.toUpperCase() == buscador.value.toUpperCase()
     )
-    /* clienteBuscado.length == 0 ? coincidencia.innerHTML = `<h3>No hay coincidencias con su búsqueda</h3>` :  coincidencia.innerHTML = "",
-    verCartera(clienteBuscado)  */
+    
     if (clienteBuscado.length == 0) {
         coincidencia.innerHTML = `<h3>No hay coincidencias con su búsqueda</h3>`
     } else {
@@ -80,7 +77,6 @@ function nuevaVenta(Clientes) {
         return elemento.nombre === ventaCliente
     })
 
-    console.log(cliVen)
 
     let venta = parseInt(inputVenta.value)
 
@@ -155,7 +151,7 @@ function eliminarCliente() {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Si, eliminar!'
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
@@ -196,7 +192,7 @@ function cargarCliente(Clientes) {
     let inputDireccion = document.getElementById("direccionInput")
     let inputSaldo = document.getElementById("saldoInput")
 
-    const clienteNuevo = new Cliente(inputNombre.value, inputRazonSocial.value, inputDireccion.value, parseInt(inputSaldo.value))
+    const clienteNuevo = new Cliente((inputNombre.value).toUpperCase(), inputRazonSocial.value, inputDireccion.value, parseInt(inputSaldo.value))
     Clientes.push(clienteNuevo)
 
     localStorage.setItem("clientes", JSON.stringify(Clientes))

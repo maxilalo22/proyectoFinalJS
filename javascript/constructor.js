@@ -1,9 +1,16 @@
-
+class Cliente {
+    constructor(nombre, razonSocial, direccion, saldo) {
+        this.nombre = nombre;
+        this.razonSocial = razonSocial;
+        this.direccion = direccion;
+        this.saldo = saldo;
+    }
+}
 let Clientes = []
 
 const cargaDeClientes = async () => {
-    const response = await fetch("clientes.json")
-    const Clientes = await response.json()
+    const response = await fetch("./clientes.json")
+    const data = await response.json()
     for(let cliente of data){
         let clienteNuevo = new Cliente(cliente.nombre, cliente.razonSocial, cliente.direccion, cliente.saldo)
         Clientes.push(clienteNuevo)
@@ -11,7 +18,7 @@ const cargaDeClientes = async () => {
     localStorage.setItem("clientes", JSON.stringify(Clientes))
     console.log(Clientes)
 }
-cargaDeClientes()
+
 
 if (localStorage.getItem("clientes")){
     for(let cliente of JSON.parse(localStorage.getItem("clientes"))){

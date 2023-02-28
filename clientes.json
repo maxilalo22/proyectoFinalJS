@@ -24,19 +24,19 @@
         "saldo": 30000 
     },
     {
-        "nombre": "Di Caprio",
+        "nombre": "DI CAPRIO",
         "razonSocial": "CaprichoSA", 
         "direccion": "Maipu 123", 
         "saldo": 51000 
     },
     {
-        "nombre": "Vendimia",
+        "nombre": "VENDIMIA",
         "razonSocial": "LaVendimia", 
         "direccion": "Bolougne Sur Mer 1234", 
         "saldo": 190000 
     },
     {
-        "nombre": "Paprika",
+        "nombre": "PAPRIKA",
         "razonSocial": "CocinaFestiva", 
         "direccion": "Martinez de Rosas 789", 
         "saldo": 0 
