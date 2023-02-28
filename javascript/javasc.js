@@ -103,7 +103,7 @@ function nuevaVenta(Clientes) {
         cancelButtonText: 'Cancelar',
         reverseButtons: true
     }).then((result) => {
-        if (result.isConfirmed) {
+        function confirmed(){
             swalWithBootstrapButtons.fire(
                 'Nueva venta generada'
             )
@@ -111,16 +111,14 @@ function nuevaVenta(Clientes) {
             formVentas.reset()
             verCartera(Clientes)
             localStorage.setItem("clientes", JSON.stringify(Clientes))
-
-        } else if (
-            result.dismiss === Swal.DismissReason.cancel
-        ) {
-            swalWithBootstrapButtons.fire(
-                'Cancelado'
-            )
         }
+        result.isConfirmed ? confirmed() : swalWithBootstrapButtons.fire(
+            'Cancelado'
+        )
     })
 }
+
+
 
 generarVenta.addEventListener("click", function () {
     corroborarVenta()
